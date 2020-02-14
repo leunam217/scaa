@@ -1,0 +1,25 @@
+[
+   {
+      "name":"C1",
+      "inports":[
+          {"service": "p1", "linkedTo": "C2" }
+      ],
+      "outports":[]
+   },
+   {
+      "name":"C2",
+      "inports":[
+          {"service": "p2", "linkedTo": "C3" }
+      ],
+      "outports":[
+          {"service": "p1", "linkedTo": "C1" }
+      ]
+   },
+   {
+      "name":"C3",
+      "inports":[],
+      "outports":[
+          {"service": "p2", "linkedTo": "C2" }
+      ]
+   }
+]
