@@ -16,7 +16,7 @@ public class Orchestrator {
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println(4);
         Jsonb jsonb = JsonbBuilder.create();
-        FileReader reader = new FileReader("/home/manu/Documentos/m2/scaa/src/main/resources/component.json");
+        FileReader reader = new FileReader("/home/jonlaokan/Code/al/scaa/src/main/resources/component.json");
         Converter converter = new Converter();
         List<Component> componentList = converter.importFromJson(reader);
         Optional<String> result = new Converter().exportToJsonString(componentList);

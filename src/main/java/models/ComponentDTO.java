@@ -1,11 +1,12 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ComponentDTO {
     private String name;
-    private List<ConnectorDTO> inports;
-    private List<ConnectorDTO> outports;
+    private List<ConnectorDTO> inports = new ArrayList<>();
+    private List<ConnectorDTO> outports = new ArrayList<>();
 
     //<editor-fold desc="Get set">
     public ComponentDTO() {

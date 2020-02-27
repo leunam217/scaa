@@ -1,9 +1,11 @@
 package models;
 
+import java.util.Optional;
+
 public class Connector {
 
     public String service = "" ;
     public Component owner;
-    public Connector linkedTo;
+    public Optional<Connector>linkedTo = Optional.empty();
 
 }

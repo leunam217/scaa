@@ -51,10 +51,10 @@ public class Converter {
         return list.stream().map(connector -> {
             ConnectorDTO connectorDTO = new ConnectorDTO();
             connectorDTO.setService(connector.service);
-            if (connector.linkedTo == null || connector.linkedTo.owner == null)
+            if (!connector.linkedTo.isPresent())
                 connectorDTO.setLinkedTo("None");
             else
-                connectorDTO.setLinkedTo(connector.linkedTo.owner.name);
+                connectorDTO.setLinkedTo(connector.linkedTo.get().owner.name);
             return connectorDTO;
         }).collect(Collectors.toList());
     }
