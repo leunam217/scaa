@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 public class Converter {
 
-    private List<Component> DTOListToList(List<ComponentDTO> l) {
+    private static List<Component> DTOListToList(List<ComponentDTO> l) {
         return l.stream().map(componentDTO -> {
             Component c = new Component();
             c.name = componentDTO.getName();
@@ -27,7 +27,7 @@ public class Converter {
         }).collect(Collectors.toList());
     }
 
-    private List<Connector> getConnectors(List<ConnectorDTO> list, Component c) {
+    private static List<Connector> getConnectors(List<ConnectorDTO> list, Component c) {
         return list.stream().map(connectorDTO -> {
             Connector connector = new Connector();
             connector.service = connectorDTO.getService();
@@ -36,7 +36,7 @@ public class Converter {
         }).collect(Collectors.toList());
     }
 
-    public List<Component> importFromJson(Reader reader){
+    public static List<Component> importFromJson(Reader reader){
         try{
             Jsonb jsonb = JsonbBuilder.create();
             List<ComponentDTO> l =jsonb.fromJson(reader,new ArrayList<ComponentDTO>(){}.getClass().getGenericSuperclass());
@@ -47,7 +47,7 @@ public class Converter {
     }
 
 
-    private List<ConnectorDTO> getConnectorsDTO (List<Connector> list, Component c){
+    private static List<ConnectorDTO> getConnectorsDTO (List<Connector> list, Component c){
         return list.stream().map(connector -> {
             ConnectorDTO connectorDTO = new ConnectorDTO();
             connectorDTO.setService(connector.service);
@@ -59,7 +59,7 @@ public class Converter {
         }).collect(Collectors.toList());
     }
 
-    private List<ComponentDTO> listToDTOList(List<Component> l) {
+    private static List<ComponentDTO> listToDTOList(List<Component> l) {
         return l.stream().map(component -> {
             ComponentDTO componentDTO = new ComponentDTO();
             componentDTO.setName(component.name);
@@ -69,7 +69,7 @@ public class Converter {
         }).collect(Collectors.toList());
     }
 
-    public Optional<String> exportToJsonString(List<Component> l){
+    public static Optional<String> exportToJsonString(List<Component> l){
         List <ComponentDTO> typedResult = listToDTOList(l);
         try {
             Jsonb jsonb = JsonbBuilder.create();
