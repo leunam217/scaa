@@ -5,7 +5,7 @@ public class ConnectorDTO {
     private String service;
     private String linkedTo;
 
-    //<editor-fold desc="Get set">
+     //<editor-fold desc="Get set">
     public ConnectorDTO(){}
 
     public String getService() {

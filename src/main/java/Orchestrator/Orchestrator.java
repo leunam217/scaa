@@ -1,8 +1,7 @@
 package Orchestrator;
 import importExport.Converter;
 import models.Component;
-import models.ComponentDTO;
-import userHMI.ComponentSelector;
+import userHMI.Ihm;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
@@ -21,8 +20,8 @@ public class Orchestrator {
       //  Optional<String> result = new Converter().exportToJsonString(componentList);
 
         //    System.out.println(result.orElse(""));
-        ComponentSelector componentSelector = new ComponentSelector();
-        Optional<Component> optionalComponent = componentSelector.getFirstComponent(componentList);
+        Ihm ihm = new Ihm();
+        Optional<Component> optionalComponent = ihm.getFirstComponent(componentList);
         if (!optionalComponent.isPresent())
             System.exit(1);
         System.out.println("T'a choisi ce composant : " + Converter.exportToJsonString(Collections.singletonList(optionalComponent.get())).get());

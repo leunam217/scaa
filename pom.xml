@@ -11,9 +11,20 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>com.github.Olived-fr</groupId>
+            <artifactId>M2DL-INFRA</artifactId>
+            <version>master</version>
+        </dependency>
+
         <dependency>
             <groupId>javax.json</groupId>
             <artifactId>javax.json-api</artifactId>
