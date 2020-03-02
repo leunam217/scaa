@@ -47,7 +47,7 @@ public class Converter {
     }
 
 
-    private static List<ConnectorDTO> getConnectorsDTO (List<Connector> list, Component c){
+    private static List<ConnectorDTO> getConnectorsDTO (List<Connector> list){
         return list.stream().map(connector -> {
             ConnectorDTO connectorDTO = new ConnectorDTO();
             connectorDTO.setService(connector.service);
@@ -63,8 +63,8 @@ public class Converter {
         return l.stream().map(component -> {
             ComponentDTO componentDTO = new ComponentDTO();
             componentDTO.setName(component.name);
-            componentDTO.setInports(getConnectorsDTO(component.inports, component));
-            componentDTO.setOutports(getConnectorsDTO(component.outports, component));
+            componentDTO.setInports(getConnectorsDTO(component.inports));
+            componentDTO.setOutports(getConnectorsDTO(component.outports));
             return componentDTO;
         }).collect(Collectors.toList());
     }
@@ -78,5 +78,6 @@ public class Converter {
             return Optional.empty();
         }
     }
+
 
 }
