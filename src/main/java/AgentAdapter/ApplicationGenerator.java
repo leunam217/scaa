@@ -1,8 +1,8 @@
 package AgentAdapter;
 
+import MockINFRA.Infrastructure;
 import models.Component;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import MASInfrastructure.Infrastructure;
 
 import java.util.List;
 

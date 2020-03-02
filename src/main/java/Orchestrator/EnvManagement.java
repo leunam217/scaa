@@ -1,11 +1,11 @@
 package Orchestrator;
 
 import AgentAdapter.AgentService;
+import MockINFRA.Infrastructure;
 import models.Component;
 import Services.DataService;
 import Services.DescisonMaker;
-import src.main.java.services.EnvironmentService;
-import MASInfrastructure.Infrastructure;
+import Services.EnvironmentService;
 
 import java.util.List;
 

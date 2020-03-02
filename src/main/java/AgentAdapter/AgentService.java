@@ -1,6 +1,6 @@
 package AgentAdapter;
 
-import MASInfrastructure.Infrastructure;
+import MockINFRA.Infrastructure;
 import models.Component;
 
 import java.util.List;
@@ -9,7 +9,7 @@ public class AgentService {
 
     private AgentLifeCycle agentLifeCycle;
     private ApplicationGenerator applicationGenerator;
-    private MASInfrastructure.Infrastructure infra;
+    private Infrastructure infra;
 
     public AgentService(AgentLifeCycle agentLifeCycle, ApplicationGenerator applicationGenerator, Infrastructure infra) {
         this.agentLifeCycle = agentLifeCycle;
