@@ -1,9 +1,14 @@
 package agentAdapter;
 
 import MASInfrastructure.Agent.InfraAgent;
+import MASInfrastructure.Agent.InfraAgentReference;
+import MASInfrastructure.Communication.ICommunication;
+import MASInfrastructure.Communication.IMessage;
 import MASInfrastructure.Infrastructure;
 import MASInfrastructure.State.LifeCycle;
-import MASInfrastructure.exemple.CommunicationParMessage;
+
+import java.util.ArrayList;
+import java.util.Optional;
 
 public class WorldAdapter implements IWorld {
 
@@ -16,6 +21,35 @@ public class WorldAdapter implements IWorld {
         maCom = new CommunicationParMessage(i);
 
     }
+
+    static class CommunicationParMessage implements ICommunication {
+        private Infrastructure i;
+
+        public void sendMessageBroadcast(IMessage message) {
+            i.sendMessageBroadcast(message);
+        }
+
+        public CommunicationParMessage(Infrastructure i) {
+            this.i = i;
+        }
+
+        public void sendMessage(IMessage message) {
+            this.i.sendMessage(message);
+        }
+
+        public Optional<IMessage> receiveMessage(InfraAgentReference reciever) {
+            return Optional.empty();
+        }
+
+        public ArrayList<IMessage> receiveMessages(InfraAgentReference reciever) {
+            return this.i.receiveMessages(reciever);
+        }
+
+        public Infrastructure getI() {
+            return this.i;
+        }
+    }
+
     @Override
     public void addAgent(IAgent iAgent) {
         AgentAdapter agent = (AgentAdapter) iAgent;
@@ -37,7 +71,7 @@ public class WorldAdapter implements IWorld {
         world.addAgent(a2);
 
         a1.setDecision((s, emitter, knowledge) -> {
-            a1.sendMessage("lol",a2);
+            a1.sendMessageBroadcast("lol");
         });
         a2.setDecision((s, emitter, knowledge) -> {System.out.println(s);System.exit(0);});
         a1.sendMessage("prelol",a1);
