@@ -2,30 +2,15 @@
 
 Le logiciel SCAA est un assistant à la construction d’applications à base de composants logiciels. Sa fonction est d’assembler des composants, de manière plus ou moins automatique, afin de produire des applications.
 
-## Pour commencer
-
-TODO : Entrez ici les instructions pour bien débuter avec votre projet...
-
-### Pré-requis
-
-- TODO : Programme 1
-- TODO : Programme 2
-
-### Installation
-
-TODO : Les étapes pour installer votre programme....
-
-Dites ce qu'il faut faire...
-
-Ensuite vous pouvez montrer ce que vous obtenez au final...
+Seule une partie du code source a été écrite, dont (en partie ou en totalité) les classes métier, l'orchestrateur, les IHM, les agents et le service qui permet d'utiliser INFRA.
 
 ## Démarrage
 
-TODO : Dites comment faire pour lancer votre projet
+TODO
 
 ## Fabriqué avec
 
-* INFRA - Bibliothèque Java qui permet la création et l’exécution d’agents génériques
+* **INFRA** - Bibliothèque Java qui permet la création et l’exécution d’agents génériques (dépendance Maven)
 
 ## Auteurs
 

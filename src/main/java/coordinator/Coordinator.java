@@ -1,4 +1,4 @@
-package Orchestrator;
+package coordinator;
 import importExport.Converter;
 import models.Component;
 import HMI.HMIUser;
@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.*;
 
-public class Orchestrator {
+public class Coordinator {
 
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println(4);
@@ -24,7 +24,7 @@ public class Orchestrator {
         Optional<Component> optionalComponent = HMIUser.getFirstComponent(componentList);
         if (!optionalComponent.isPresent())
             System.exit(1);
-        System.out.println("T'a choisi ce composant : " + Converter.exportToJsonString(Collections.singletonList(optionalComponent.get())).get());
+        System.out.println("Tu as choisi ce composant : " + Converter.exportToJsonString(Collections.singletonList(optionalComponent.get())).get());
     }
 }
 

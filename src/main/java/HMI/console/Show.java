@@ -14,7 +14,7 @@ public class Show {
     }
 
     public static void askStartComponent(){
-       System.out.println("With what component do  you want to start with? Enter the name");
+       System.out.println("With what component do you want to start with? Enter the name");
     }
 
     public static void askForExpertChoice(List<Component> choiceOwner, Connector with){
