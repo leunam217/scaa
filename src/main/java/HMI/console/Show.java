@@ -1,4 +1,4 @@
-package userHMI.console;
+package HMI.console;
 
 import importExport.Converter;
 import models.Component;

@@ -17,6 +17,11 @@ public class AgentAdapter implements IAgent {
     EtatDecision etatDecision = new EtatDecision();
 
     @Override
+    public Object getKnowledge() {
+        return etatDecision.knowledge;
+    }
+
+    @Override
     public void setKnowledge(Object o) {
         etatDecision.knowledge = o;
     }

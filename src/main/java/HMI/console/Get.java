@@ -1,8 +1,7 @@
-package userHMI.console;
+package HMI.console;
 
 import importExport.Converter;
 import models.Component;
-import models.Connector;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
