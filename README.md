@@ -27,7 +27,7 @@ Il s'agit juste de briques logiciels pour l'instant.
 ### AgentAdapter
 
  **La brique est fonctionnelle.**
-Dans cet exemple, on crée un monde avec deux agents. On dit que le premier agent, quand il reçoit un message, dit à tout le monde “lol”. Le deuxième agent, quand il reçoit un message, l’affiche et fait un exit. Pour déclencher les événements on envoie un message au premier agent. Pour commencer l'exécution on exécute start.
+Dans cet ![exemple](https://github.com/leunam217/scaa/blob/master/src/main/java/agentAdapter/WorldAdapter.java), on crée un monde avec deux agents. On dit que le premier agent, quand il reçoit un message, dit à tout le monde “lol”. Le deuxième agent, quand il reçoit un message, l’affiche et fait un exit. Pour déclencher les événements on envoie un message au premier agent. Pour commencer l'exécution on exécute start.
  
    ![scaa1](https://github.com/leunam217/scaa/blob/master/scaa1.png)
    ![scaa2](https://github.com/leunam217/scaa/blob/master/scaa2.png)
