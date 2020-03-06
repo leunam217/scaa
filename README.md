@@ -27,7 +27,7 @@ Il s'agit juste de bricks logiciels pour l'instant.
 ### AgentAdapter
 
  **Le brick est fonctionnel.**   
-Dans cet exemple, on crée un monde avec deux agents. On dit que le premier agent, quand il reçoit un message, dit à tout le monde “lol”. Le deuxième agent, quand il reçoit un message, l’affiche et fait un exit. Pour déclencher les événements on envoie un message au premier agent. Pour commencer l'exécution on exécute start.
+Dans cet exemple, on crée un monde avec deux agents. On dit que le premier agent, quand il reçoit un message, dit à tout le monde “lol”. Le deuxième agent, quand il reçoit un message, l’affiche et fait un exit. Pour déclencher les événements on envoie un message au premier agent. Pour commencer l'exécution on exécute start. L'exemple se trouve dans la classe WorldAdapter. 
  
    ![scaa1](https://github.com/leunam217/scaa/blob/master/scaa1.png)
    ![scaa2](https://github.com/leunam217/scaa/blob/master/scaa2.png)
