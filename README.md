@@ -12,7 +12,7 @@ Le logiciel SCAA est un assistant à la construction d’applications à base de
 
 ## Démarrage
 
-Il s'agit juste de briques logiciels pour l'instant.
+Il s'agit juste de briques logicielles pour l'instant.
 
 ### IHM 
 
