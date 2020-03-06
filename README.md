@@ -50,6 +50,10 @@ Le module “Converter” permet d’importer le fichier JSON contenant la descr
 ### Models 
 Structures de données utilisées par scaa. Un component a des connectors. Les DTO existent pour la sérialisation/désérialisation avec **JSON-B**.
 
+### Agents
+
+Contient le début de l'implémentation des agents s'appuyant sur les services fournis par l'adaptateur
+
 ## Fabriqué avec
 
 * INFRA - Bibliothèque Java qui permet la création et l’exécution d’agents génériques
